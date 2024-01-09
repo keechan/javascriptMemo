@@ -1,0 +1,87 @@
+[element 속성 변경하기]
+<!DOCTYPE html>
+<script>
+    nameK=()=>{
+        f1.name.value="name who?";
+        //const nameMode = document.getElementById("name");
+        //wbtn.addEventListener("click", function() {
+        //document.getElementById("target").className = "white";
+    };
+
+</script>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <h2>자바스크립트 연습</h2>
+    <form name="f1">
+        이름 : <input type="text" name="name" id="name">
+               <input type="button" value="확인" onClick="nameK()">
+    </form>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<script>
+    nameK=()=>{
+        document.getElementById("name").value = "TEST입니다";
+        //const nameMode = document.getElementById("name");
+        //wbtn.addEventListener("click", function() {
+        //document.getElementById("target").className = "white";
+    };
+
+</script>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <h2>자바스크립트 연습</h2>
+    <form name="f1">
+        이름 : <input type="text" name="name" id="name">
+               <input type="button" value="확인" onClick="nameK()">
+    </form>
+</body>
+</html>
+
+--방법 같이 확인
+<script>
+    nameK=()=>{
+        //alert(f1.name.value);
+        //let k = document.getElementById("name").value;
+        //let k = document.getElementsByClassName("id")[0].value;
+        let k = document.getElementsByName("name")[0].value;
+        alert(k);
+    };
+
+</script>
+
+<!DOCTYPE html>
+<script>
+    k1=a=>alert("k1확인"+a);
+    k2=a=>alert("k2확인"+a);
+    k3=a=>alert("k3확인"+a);
+    k4=a=>alert("k4확인"+a);
+</script>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <h2>자바스크립트 연습</h2>
+    <form name="f1">
+        <input type="button" value="확인1" onClick="k1(100)">
+        <input type="button" value="확인2" onClick="k2(200)">
+        <input type="button" value="확인3" onClick="k3(300)">
+        <button onClick="k4(300)">확인4</button>
+    </form>
+</body>
+</html>
